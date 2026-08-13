@@ -21,6 +21,27 @@
   gtag('js', new Date());
   gtag('config', 'G-R5NLNTT1ZR');
 </script>
+<!-- GA4 lead events: mirrors the Meta Pixel Lead events into GA4 -->
+<script>
+  (function () {
+    document.addEventListener('submit', function (e) {
+      var f = e.target;
+      if (!f || f.tagName !== 'FORM') return;
+      gtag('event', 'generate_lead', {
+        form_name: f.getAttribute('data-form-name') || document.title,
+        page_path: location.pathname
+      });
+    }, true);
+    document.addEventListener('click', function (e) {
+      var a = e.target && e.target.closest && e.target.closest('a[href^="tel:"], a[href^="mailto:"]');
+      if (!a) return;
+      gtag('event', 'contact', {
+        method: a.getAttribute('href').indexOf('tel:') === 0 ? 'phone' : 'email',
+        page_path: location.pathname
+      });
+    }, true);
+  })();
+</script>
 <!-- Meta Pixel -->
 <script>
   !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -161,7 +182,7 @@
       <p class="sub fade d3">Real estate across Jacksonville and the First Coast — from the beaches to St.&nbsp;Johns County. Straight talk, real numbers, and a plan that works.</p>
       <div class="cta-row fade d3">
         <a class="btn btn-primary" href="#contact">Let's figure it out together</a>
-        <a class="btn btn-ghost" href="https://mathewsmith.unitedrealestategallery.com/thinkingofselling.htm">What's my home worth?</a>
+        <a class="btn btn-ghost" href="https://instahomeprice.com/">What's my home worth?</a>
       </div>
     </div>
     <div class="portrait fade d3">
@@ -241,7 +262,7 @@
     </div>
     <div>
       <div class="banner" id="sentBanner" role="status">Got it — I'll reach out shortly.</div>
-      <form action="https://api.web3forms.com/submit" method="POST">
+      <form action="https://api.web3forms.com/submit" method="POST" data-form-name="mmh_home_contact">
         <input type="hidden" name="access_key" value="a67a24a9-44e8-475d-8240-e3a9df61dd03">
         <input type="hidden" name="subject" value="New lead from MathewMovesHomes.com">
         <input type="hidden" name="redirect" value="https://mathewmoveshomes.com/?sent=1#contact">
@@ -271,7 +292,8 @@
       <img class="ureg-logo" src="assets/ureg.png" alt="United Real Estate Gallery" width="124" height="52">
       <strong>Mathew Smith, Realtor®</strong> · United Real Estate Gallery<br>
       1262-1 S McDuff Avenue, Jacksonville, FL 32205 · FL License #SL3377387<br>
-      <a href="tel:+19043342295">904-334-2295</a> · <a href="https://mathewsmithrealtor.com/">MathewSmithRealtor.com</a>
+      <a href="tel:+19043342295">904-334-2295</a> · <a href="https://mathewsmithrealtor.com/">MathewSmithRealtor.com</a><br>
+      Free home valuation: <a href="https://instahomeprice.com/">InstaHomePrice.com</a>
     </div>
     <div class="eho">
       <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#9FB4C8" stroke-width="1.5" aria-hidden="true"><path d="M12 3 2 10h3v10h14V10h3L12 3z"/><path d="M12 8v4M8 12h8" stroke-linecap="round"/></svg>
