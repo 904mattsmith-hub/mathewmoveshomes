@@ -211,8 +211,9 @@
   .contact label{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#B9CBDD}
   .contact input,.contact select,.contact textarea{width:100%;padding:12px 14px;border-radius:6px;border:1px solid #3E5A78;background:#12365C;color:var(--white);font-family:var(--sans);font-size:15px}
   .contact ::placeholder{color:#7E96AC}
-  .agentline{display:flex;align-items:center;gap:16px;margin-top:26px}
-  .agentline img{width:74px;height:74px;object-fit:cover;border-radius:50%;border:2px solid var(--cyan)}
+  .agentline{display:flex;align-items:center;gap:18px;margin-top:26px}
+  .agentline img{width:180px;height:120px;object-fit:cover;border-radius:10px;border:2px solid var(--cyan);flex-shrink:0}
+  @media (max-width:480px){.agentline{flex-direction:column;align-items:flex-start}.agentline img{width:100%;height:auto}}
   .agentline b{display:block;font-size:17px}
   .agentline span{color:#B9CBDD;font-size:14px}
 
@@ -318,7 +319,7 @@
       <h2>Thinking about your next move?</h2>
       <p class="lead">Whether you're weighing selling, curious what your home is worth, or looking for the next Jax Beach investment property — tell me a little and I'll get right back to you.</p>
       <div class="agentline">
-        <img src="../assets/headshot.jpg" alt="Mathew Smith, Realtor®" onerror="this.style.display='none'">
+        <img src="agents.jpg" alt="Mathew Smith and Khristi V. Cummings, Realtors® with United Real Estate Gallery" onerror="this.style.display='none'">
         <div>
           <b>Mathew Smith &amp; Khristi V. Cummings, Realtors®</b>
           <span>United Real Estate Gallery<br>
