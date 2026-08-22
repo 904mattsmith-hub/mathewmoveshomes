@@ -113,6 +113,28 @@
   .crit .k{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--slate);font-weight:600}
   .crit .v{font-family:var(--display);font-size:22px;color:var(--navy);margin-top:6px}
 
+  /* matched listings */
+  .subhead{font-family:var(--display);font-size:20px;color:var(--navy);margin:30px 0 4px}
+  .subnote{color:var(--slate);font-size:15px;margin-bottom:16px}
+  .listings{display:grid;gap:12px}
+  .lst{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;background:var(--white);border:1px solid #DCE5EC;border-radius:10px;padding:16px 20px}
+  .lst .pr{font-family:var(--display);font-size:22px;color:var(--navy);min-width:104px}
+  .lst .ad{color:var(--ink);font-size:15px;flex:1;min-width:200px}
+  .lst .ad .mls{display:block;color:var(--slate);font-size:12.5px;letter-spacing:.04em;margin-top:2px}
+
+  /* payment breakdown */
+  .pay{background:var(--white);border:1px solid #DCE5EC;border-radius:12px;padding:8px 24px;margin-top:8px}
+  .pay .r{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:15px 0;border-bottom:1px solid #E9EEF3}
+  .pay .r:last-child{border-bottom:none}
+  .pay .r .lab{color:var(--ink);font-size:15px}
+  .pay .r .lab .s{display:block;color:var(--slate);font-size:12.5px;margin-top:1px}
+  .pay .r .amt{font-family:var(--display);font-size:22px;color:var(--navy);white-space:nowrap}
+  .pay .r.total{background:transparent}
+  .pay .r.total .lab{font-weight:700;color:var(--navy)}
+  .pay .r.total .amt{color:var(--cyan);font-size:26px}
+  .verify{background:rgba(201,130,27,.09);border:1px solid #E7C79A;border-radius:10px;padding:18px 20px;margin-top:18px;color:var(--ink);font-size:15px}
+  .verify b{color:#9a640f}
+
   .callout{background:rgba(41,182,229,.08);border:1px solid #BfE4F3;border-radius:10px;padding:18px 20px;margin-top:24px;color:var(--ink);font-size:15px}
   .callout b{color:var(--navy)}
 
@@ -338,6 +360,27 @@
     </div>
     <div class="callout">
       <b>Why the low fees matter:</b> at this price point the monthly dues make a real difference to what you qualify for and what feels comfortable. We'll flag the fee amount and what it covers on every option so we're comparing apples to apples. With Millington Ln pointing to net proceeds well above the next purchase price, you're in a strong position to move on your terms.
+    </div>
+
+    <h3 class="subhead">Matches we've already pulled</h3>
+    <p class="subnote">A first set of active condos &amp; townhomes in your buy box and budget — attached so you can start getting a feel for what's out there.</p>
+    <div class="listings">
+      <div class="lst"><span class="pr">$145,000</span><span class="ad">8550 Touchton Rd #111, Jacksonville, FL 32216<span class="mls">MLS #2128855 · Active</span></span></div>
+      <div class="lst"><span class="pr">$154,900</span><span class="ad">7602 Las Palmas Way #181, Jacksonville, FL 32256<span class="mls">MLS #2134506 · Active</span></span></div>
+      <div class="lst"><span class="pr">$155,000</span><span class="ad">8300 Plaza Gate Ln #1122, Jacksonville, FL 32217<span class="mls">MLS #2135968 · Active</span></span></div>
+      <div class="lst"><span class="pr">$155,000</span><span class="ad">4915 Baymeadows Rd #6A, Jacksonville, FL 32217<span class="mls">MLS #2145405 · Active</span></span></div>
+      <div class="lst"><span class="pr">$199,000</span><span class="ad">10550 Baymeadows Rd #130, Jacksonville, FL 32256<span class="mls">Active</span></span></div>
+    </div>
+
+    <h3 class="subhead">Running the numbers</h3>
+    <p class="subnote">A rough monthly estimate at today's rates, purchasing under $200,000. Real figures depend on the exact price, rate, and the specific building's dues.</p>
+    <div class="pay">
+      <div class="r"><span class="lab">Estimated mortgage payment<span class="s">Principal &amp; interest, purchase under $200K at current rates</span></span><span class="amt">~$1,300 / mo</span></div>
+      <div class="r"><span class="lab">Condo / townhome fees<span class="s">Typical average in this price range</span></span><span class="amt">~$500 / mo</span></div>
+      <div class="r total"><span class="lab">Estimated total monthly</span><span class="amt">$1,700 – $1,800 / mo</span></div>
+    </div>
+    <div class="verify">
+      <b>Let's confirm:</b> is roughly <b>$1,700 – $1,800 a month</b> a comfortable total payment for you on the next home? If the fees push a particular building higher or lower than you'd like, we'll steer the search to match. This estimate is <b>principal, interest, and HOA/condo dues only</b> — it doesn't include the down payment and closing costs to purchase, which we'll walk through separately.
     </div>
   </div>
 </section>
