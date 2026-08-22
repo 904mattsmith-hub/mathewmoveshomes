@@ -42,6 +42,16 @@
   .top .lead{color:#B9CBDD;max-width:64ch;margin-top:14px}
   .privtag{display:inline-block;margin-top:18px;background:rgba(41,182,229,.14);border:1px solid var(--cyan);border-radius:999px;padding:6px 15px;font-size:12.5px;letter-spacing:.04em;color:#DCE9F4}
 
+  /* agent bar */
+  .agents{display:flex;align-items:center;gap:20px;margin-top:26px;padding-top:24px;border-top:1px solid #24425F;flex-wrap:wrap}
+  .agents img{height:96px;width:auto;border-radius:10px;border:2px solid var(--cyan);flex:none}
+  .agents .info{display:flex;flex-wrap:wrap;gap:14px 40px}
+  .agents .who{min-width:230px}
+  .agents .who .nm{font-family:var(--display);font-size:19px;color:var(--white)}
+  .agents .who .ttl{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--cyan);margin:2px 0 6px}
+  .agents .who .ln{color:#B9CBDD;font-size:14px;line-height:1.7}
+  .agents .who .ln a{color:var(--cyan);text-decoration:none}
+
   /* property snapshot strip */
   .snap{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:26px;padding-top:22px;border-top:1px solid #24425F}
   .snap div{color:#B9CBDD;font-size:14px}
@@ -133,7 +143,27 @@
     <h1>Kim Beach — Your Game Plan</h1>
     <p class="addr">1922 Millington Ln · Jacksonville, FL 32246 · Sutton Lakes</p>
     <p class="lead">A working summary from our listing appointment: what your home is worth today, what we'll put front-and-center to market it, the short punch list to hit the top of the range, and where you're headed next. Straight talk, real numbers, a plan that works.</p>
-    <span class="privtag">Private working document — for Kim &amp; Mathew</span>
+    <span class="privtag">Private working document — for Kim, Mathew &amp; Khristi</span>
+
+    <div class="agents">
+      <img src="../assets/agents.jpg" alt="Mathew Smith and Khristi V. Cummings, Realtors® with United Real Estate Gallery" onerror="this.style.display='none'">
+      <div class="info">
+        <div class="who">
+          <div class="nm">Mathew Smith</div>
+          <div class="ttl">Realtor®</div>
+          <div class="ln">FL Lic. SL3377387<br>
+            <a href="tel:+19043342295">904-334-2295</a><br>
+            <a href="mailto:904mattsmith@gmail.com">904mattsmith@gmail.com</a></div>
+        </div>
+        <div class="who">
+          <div class="nm">Khristi V. Cummings</div>
+          <div class="ttl">Realtor®</div>
+          <div class="ln">FL Lic. SL3401775<br>
+            <a href="tel:+17042807277">704-280-7277</a><br>
+            <a href="mailto:khristiviktoriany@propertyinjax.com">khristiviktoriany@propertyinjax.com</a></div>
+        </div>
+      </div>
+    </div>
 
     <div class="snap">
       <div><b>4 bd / 2 ba</b>Single-family</div>
@@ -284,7 +314,7 @@
     </div>
 
     <div class="callout">
-      <b>Next from me:</b> I'll get the two contractor quotes (electrical devices + bathroom window) turned around and send you the numbers, then we'll set a target list date once the punch list is done.
+      <b>Next from us:</b> we'll get the two contractor quotes (electrical devices + bathroom window) turned around and send you the numbers, then set a target list date once the punch list is done.
     </div>
   </div>
 </section>
@@ -297,7 +327,7 @@
       <div>
         <p class="eyebrow">Your next move</p>
         <h2>What we're looking for</h2>
-        <p class="sec-note">Once Millington Ln is sold, here's the target for the next one. I'll set up a search around these and send you matches as they hit the market.</p>
+        <p class="sec-note">Once Millington Ln is sold, here's the target for the next one. We'll set up a search around these and send you matches as they hit the market.</p>
       </div>
     </div>
     <div class="crit">
@@ -307,7 +337,7 @@
       <div class="item"><div class="k">Fees</div><div class="v">Low condo / HOA dues</div></div>
     </div>
     <div class="callout">
-      <b>Why the low fees matter:</b> at this price point the monthly dues make a real difference to what you qualify for and what feels comfortable. I'll flag the fee amount and what it covers on every option so we're comparing apples to apples. With Millington Ln pointing to net proceeds well above the next purchase price, you're in a strong position to move on your terms.
+      <b>Why the low fees matter:</b> at this price point the monthly dues make a real difference to what you qualify for and what feels comfortable. We'll flag the fee amount and what it covers on every option so we're comparing apples to apples. With Millington Ln pointing to net proceeds well above the next purchase price, you're in a strong position to move on your terms.
     </div>
   </div>
 </section>
@@ -315,11 +345,11 @@
 <footer>
   <div class="wrap">
     <img class="ureg-logo" src="../assets/ureg.png" alt="United Real Estate Gallery" width="114" height="48">
-    <strong>Mathew Smith, Realtor®</strong> · United Real Estate Gallery<br>
-    1262-1 S McDuff Avenue, Jacksonville, FL 32205 · FL License #SL3377387<br>
-    <a href="tel:+19043342295">904-334-2295</a> · <a href="https://mathewmoveshomes.com/">MathewMovesHomes.com</a>
-    <p class="reach">Questions on any of this? Call or text <a href="tel:+19043342295">904-334-2295</a> or email <a href="mailto:904mattsmith@gmail.com">904mattsmith@gmail.com</a>.</p>
-    <p class="disc">Valuation figures are drawn from an RPR® seller report (Aug 2026) using public records and MLS-sourced comps. They are estimates, not an appraisal, and not a guarantee of sale price. Prepared for discussion between Kim Beach and Mathew Smith, Realtor®.</p>
+    <strong>Mathew Smith, Realtor®</strong> · FL Lic. SL3377387 · <a href="tel:+19043342295">904-334-2295</a> · <a href="mailto:904mattsmith@gmail.com">904mattsmith@gmail.com</a><br>
+    <strong>Khristi V. Cummings, Realtor®</strong> · FL Lic. SL3401775 · <a href="tel:+17042807277">704-280-7277</a> · <a href="mailto:khristiviktoriany@propertyinjax.com">khristiviktoriany@propertyinjax.com</a><br>
+    United Real Estate Gallery · 1262-1 S McDuff Avenue, Jacksonville, FL 32205 · <a href="https://mathewmoveshomes.com/">MathewMovesHomes.com</a>
+    <p class="reach">Questions on any of this? Call or text Mathew at <a href="tel:+19043342295">904-334-2295</a> or Khristi at <a href="tel:+17042807277">704-280-7277</a>.</p>
+    <p class="disc">Valuation figures are drawn from an RPR® seller report (Aug 2026) using public records and MLS-sourced comps. They are estimates, not an appraisal, and not a guarantee of sale price. Prepared for discussion between Kim Beach and her agents, Mathew Smith and Khristi V. Cummings, Realtors®.</p>
   </div>
 </footer>
 
