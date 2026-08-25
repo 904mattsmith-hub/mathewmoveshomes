@@ -107,6 +107,14 @@
   .pill.diy{background:rgba(41,182,229,.14);color:#1179a0}
   .task .owner-note{margin-top:10px;font-size:13.5px;color:var(--slate);border-top:1px dashed #DCE5EC;padding-top:10px}
 
+  /* repair contacts */
+  .vendors{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:16px}
+  .vendor{background:var(--white);border:1px solid #DCE5EC;border-radius:10px;padding:18px 20px}
+  .vendor .nm{font-family:var(--display);font-size:19px;color:var(--navy)}
+  .vendor .role{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--cyan);font-weight:600;margin:3px 0 10px}
+  .vendor .ph{display:inline-block;font-size:17px;font-weight:700;color:var(--navy);text-decoration:none}
+  .vendor .ph:hover{color:var(--cyan)}
+
   /* buy-side criteria grid */
   .crit{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;margin-top:8px}
   .crit .item{background:var(--white);border:1px solid #DCE5EC;border-radius:10px;padding:20px 22px}
@@ -339,6 +347,26 @@
     <div class="task advise">
       <div class="th"><h3>Add a barn door</h3><span class="pill diy">Recommended upgrade</span></div>
       <p>Add a <b>barn-style sliding door</b> in the <b>middle bedroom</b> — a low-cost, high-style touch that photographs well.</p>
+    </div>
+
+    <h3 class="subhead">Repair contacts</h3>
+    <p class="subnote">The vendors we're lining up for the work above — here for reference so everyone's on the same page.</p>
+    <div class="vendors">
+      <div class="vendor">
+        <div class="nm">John Fitchell</div>
+        <div class="role">Electrician · outlets &amp; switches</div>
+        <a class="ph" href="tel:+19045687262">904-568-7262</a>
+      </div>
+      <div class="vendor">
+        <div class="nm">Tommy Corbett</div>
+        <div class="role">Window repair · cracked bath glass</div>
+        <a class="ph" href="tel:+19042198739">904-219-8739</a>
+      </div>
+      <div class="vendor">
+        <div class="nm">Nate</div>
+        <div class="role">Handyman · brick &amp; drywall repairs</div>
+        <a class="ph" href="tel:+19048863667">904-886-3667</a>
+      </div>
     </div>
 
     <div class="callout">
