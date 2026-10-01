@@ -107,6 +107,19 @@
     html{scroll-behavior:auto}
   }
 
+  /* ---------- featured listing ---------- */
+  .featured{padding:64px 0 8px;background:var(--white)}
+  .flist{display:grid;grid-template-columns:1.2fr 1fr;border:1px solid #DCE5EC;border-radius:12px;overflow:hidden;text-decoration:none;color:var(--ink);margin-top:24px;transition:border-color .15s ease,transform .15s ease}
+  .flist:hover{border-color:var(--cyan);transform:translateY(-3px)}
+  .flist img{width:100%;height:100%;min-height:260px;object-fit:cover}
+  .flist .fbody{padding:30px 28px}
+  .flist .fprice{font-family:var(--display);font-size:32px;color:var(--navy);line-height:1.1;margin:6px 0}
+  .flist h3{font-family:var(--display);font-weight:400;font-size:22px;color:var(--navy);margin-bottom:8px}
+  .flist p{color:var(--slate);font-size:15.5px}
+  .flist .go{display:inline-block;margin-top:16px;color:var(--cyan);font-weight:600;font-size:14px}
+  .flist .go::after{content:"→";margin-left:6px}
+  @media (max-width:760px){.flist{grid-template-columns:1fr}.flist img{min-height:220px;height:220px}}
+
   /* ---------- cards ---------- */
   .cards{padding:72px 0;background:var(--white)}
   .grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;margin-top:34px}
@@ -190,6 +203,22 @@
     </div>
   </div>
 </header>
+
+<section class="featured">
+  <div class="wrap">
+    <p class="eyebrow">Featured Listing</p>
+    <a class="flist" href="/25-coquina-ave/">
+      <img src="/25-coquina-ave/exterior-front.jpg" alt="Front exterior of 25 Coquina Ave, an updated block home in Davis Shores, St. Augustine">
+      <div class="fbody">
+        <p class="eyebrow">Just Listed · Davis Shores · St. Augustine</p>
+        <div class="fprice">$539,000</div>
+        <h3>25 Coquina Ave</h3>
+        <p>Updated 4 bed · 2 bath block home, ~1,800 sq ft on a 0.28-acre fenced lot, just over the Bridge of Lions.</p>
+        <span class="go">See photos &amp; schedule a showing</span>
+      </div>
+    </a>
+  </div>
+</section>
 
 <section class="cards">
   <div class="wrap">
