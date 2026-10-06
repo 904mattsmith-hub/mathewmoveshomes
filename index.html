@@ -53,6 +53,34 @@
   fbq('track', 'PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=357682004910597&ev=PageView&noscript=1" alt=""></noscript>
+<!-- Structured data: agent (keep name/address/phone identical to Zillow + Google Business Profile) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "RealEstateAgent",
+  "name": "Mathew Smith, Realtor®",
+  "alternateName": "Mathew Moves Homes",
+  "url": "https://mathewmoveshomes.com/",
+  "image": "https://mathewmoveshomes.com/assets/headshot.jpg",
+  "logo": "https://mathewmoveshomes.com/assets/logo.png",
+  "telephone": "+1-904-334-2295",
+  "email": "904mattsmith@gmail.com",
+  "description": "Realtor® with United Real Estate Gallery — 200+ homes sold across Duval and St. Johns Counties. Buying, selling, and investing across Jacksonville and the First Coast.",
+  "worksFor": {"@type": "Organization", "name": "United Real Estate Gallery"},
+  "address": {"@type": "PostalAddress", "streetAddress": "1262-1 S McDuff Avenue", "addressLocality": "Jacksonville", "addressRegion": "FL", "postalCode": "32205", "addressCountry": "US"},
+  "areaServed": [
+    {"@type": "AdministrativeArea", "name": "Duval County, FL"},
+    {"@type": "AdministrativeArea", "name": "St. Johns County, FL"}
+  ],
+  "knowsAbout": ["Home buying", "Home selling", "Real estate investing", "1031 exchange", "Military relocation"],
+  "hasCredential": [
+    {"@type": "EducationalOccupationalCredential", "credentialCategory": "license", "name": "Florida Real Estate Sales Associate License SL3377387"},
+    {"@type": "EducationalOccupationalCredential", "name": "C2EX"},
+    {"@type": "EducationalOccupationalCredential", "name": "TR-ALL"},
+    {"@type": "EducationalOccupationalCredential", "name": "MRP — Military Relocation Professional"}
+  ]
+}
+</script>
 
 <style>
   :root{
