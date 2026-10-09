@@ -674,6 +674,7 @@
   }
 
   // ----- lead scoring + subject line on submit -----
+  var LEAD_LOG = 'https://script.google.com/macros/s/AKfycbwvxRHuVvyxbYGEqVlcqyMmWPXniXm1Ih-LHSkp_KoAxLa_R4hxiqhKNf8ffTKLJS0a/exec';
   function val(name) {
     var el = form.querySelector('input[name="' + name + '"]:checked');
     return el ? el.value : '';
@@ -703,6 +704,13 @@
     if (sell.indexOf('Yes') === 0) tags.push('ALSO SELLING');
     document.getElementById('f-subject').value =
       (pri === 'HOT' ? '🔥 HOT' : pri === 'WARM' ? 'WARM' : 'Nurture') + ' Buyer Lead — ' + tags.join(' · ');
+
+    // copy the lead into the Buyer Leads Google Sheet (fire-and-forget; the email still goes via Web3Forms)
+    try {
+      var log = new URLSearchParams(new FormData(form));
+      log.delete('access_key'); log.delete('h-captcha-response'); log.delete('g-recaptcha-response');
+      navigator.sendBeacon(LEAD_LOG, log);
+    } catch (x) {}
 
     try {
       fbq('track', 'Lead', { content_name: 'buyer plan', content_category: type, lead_priority: pri });
