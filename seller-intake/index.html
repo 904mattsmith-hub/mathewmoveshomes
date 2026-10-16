@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Seller Intake Form | Mathew Moves Homes</title>
-<meta name="description" content="Tell Mathew Smith, Realtor® about your home so we can price it right and build a plan to get it sold. A few quick details and I'll follow up.">
+<meta name="description" content="Tell Mathew Smith & Khristi V. Cummings, Realtors®, about your home so we can price it right and build a plan to get it sold. A few quick details and we'll follow up.">
 <meta name="robots" content="noindex">
 <link rel="canonical" href="https://mathewmoveshomes.com/seller-intake/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Seller Intake Form | Mathew Moves Homes">
-<meta property="og:description" content="A few quick details about your home so we can price it right and build a plan to get it sold — Mathew Smith, Realtor®.">
+<meta property="og:description" content="A few quick details about your home so we can price it right and build a plan to get it sold — Mathew Smith & Khristi V. Cummings, Realtors®.">
 <meta property="og:url" content="https://mathewmoveshomes.com/seller-intake/">
-<meta property="og:image" content="https://mathewmoveshomes.com/assets/headshot.jpg">
+<meta property="og:image" content="https://mathewmoveshomes.com/725-7th-ave-s/agents.jpg">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230E2A47'/%3E%3Cpath d='M14 44V22l10 12 8-12 18 22' fill='none' stroke='%2329B6E5' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 
 <!-- Google Analytics 4 -->
@@ -82,6 +82,7 @@
   .brandbar{display:flex;align-items:center;gap:12px;margin-bottom:34px}
   .brandbar img{height:56px;width:auto;background:var(--white);border-radius:8px;padding:6px}
   .top .lead{color:#B9CBDD;max-width:60ch;margin-top:12px}
+  .top .byline{color:var(--cyan);font-size:15px;margin-top:6px}
 
   /* ---------- form panel ---------- */
   .panel{background:var(--navy);color:var(--white);padding:0 0 72px}
@@ -114,6 +115,13 @@
   .reach{margin-top:30px;color:#B9CBDD;font-size:14.5px;text-align:center}
   .reach a{color:var(--cyan);text-decoration:none;font-weight:600}
 
+  .agentline{display:flex;align-items:center;gap:18px;margin-top:34px}
+  .agentline img{width:160px;height:107px;object-fit:cover;border-radius:10px;border:2px solid var(--cyan);flex-shrink:0}
+  .agentline b{display:block;font-size:16px;color:var(--white)}
+  .agentline span{color:#B9CBDD;font-size:14px}
+  .agentline a{color:var(--cyan);text-decoration:none}
+  @media (max-width:480px){.agentline{flex-direction:column;align-items:flex-start}.agentline img{width:100%;height:auto}}
+
   /* ---------- footer ---------- */
   footer{background:var(--navy-deep);color:#9FB4C8;padding:40px 0;font-size:13.5px;line-height:1.8}
   footer strong{color:var(--white);font-weight:600}
@@ -135,13 +143,14 @@
     </div>
     <p class="eyebrow">Seller Intake Form</p>
     <h1>Let's get your home sold</h1>
-    <p class="lead">Fill in a few details about your property and your timeline. This helps me price it right, spot what matters to buyers, and build a plan before we ever meet. It takes about three minutes, and I'll follow up personally.</p>
+    <p class="byline">Mathew Smith &amp; Khristi V. Cummings, Realtors® · United Real Estate Gallery</p>
+    <p class="lead">Fill in a few details about your property and your timeline. This helps us price it right, spot what matters to buyers, and build a plan before we ever meet. It takes about three minutes, and we'll follow up personally.</p>
   </div>
 </header>
 
 <section class="panel">
   <div class="wrap">
-    <div class="banner" id="sentBanner" role="status"><b>Got it — thank you!</b> Your details are on their way to Mathew. I'll reach out shortly to talk through next steps.</div>
+    <div class="banner" id="sentBanner" role="status"><b>Got it — thank you!</b> Your details are on their way to Mathew &amp; Khristi. We'll reach out shortly to talk through next steps.</div>
 
     <form action="https://api.web3forms.com/submit" method="POST" data-form-name="mmh_seller_intake" onsubmit="fbq('track','Lead',{content_name:'seller intake form'})">
       <input type="hidden" name="access_key" value="a67a24a9-44e8-475d-8240-e3a9df61dd03">
@@ -244,33 +253,45 @@
         <label for="f-reason">Why are you thinking about selling? <span class="opt">(optional)</span></label>
         <input id="f-reason" type="text" name="reason_for_selling" placeholder="Upsizing, relocating, downsizing, investment…">
         <label for="f-price">Do you have a price in mind? <span class="opt">(optional)</span></label>
-        <input id="f-price" type="text" name="target_price" placeholder="A range is fine — or leave it to me">
+        <input id="f-price" type="text" name="target_price" placeholder="A range is fine — or leave it to us">
       </div>
 
       <!-- Condition -->
       <div class="section">
-        <h2>Anything I should know</h2>
-        <p class="hint">Recent updates, repairs needed, HOA, tenants, or anything else that helps me give you a straight number.</p>
+        <h2>Anything we should know</h2>
+        <p class="hint">Recent updates, repairs needed, HOA, tenants, or anything else that helps us give you a straight number.</p>
         <label for="f-updates">Recent updates or renovations <span class="opt">(optional)</span></label>
         <textarea id="f-updates" name="recent_updates" rows="2" placeholder="Roof, HVAC, kitchen, flooring, additions…"></textarea>
         <label for="f-notes">Anything else? <span class="opt">(optional)</span></label>
         <textarea id="f-notes" name="notes" rows="3" placeholder="Known repairs, HOA, questions, best times to reach you…"></textarea>
       </div>
 
-      <button class="btn btn-primary" type="submit">Send it to Mathew</button>
-      <p class="privacy">Your details go straight to Mathew — never shared or sold. No spam, ever.</p>
+      <div class="h-captcha" data-captcha="true" style="margin:4px 0 12px"></div>
+      <button class="btn btn-primary" type="submit">Send it to Mathew &amp; Khristi</button>
+      <p class="privacy">Your details go straight to Mathew &amp; Khristi — never shared or sold. No spam, ever.</p>
     </form>
 
-    <p class="reach">Prefer to talk it through first? Call or text <a href="tel:+19043342295">904-334-2295</a> or email <a href="mailto:904mattsmith@gmail.com">904mattsmith@gmail.com</a>.</p>
+    <p class="reach">Prefer to talk it through first?</p>
+    <div class="agentline">
+      <img src="../725-7th-ave-s/agents.jpg" alt="Mathew Smith and Khristi V. Cummings, Realtors® with United Real Estate Gallery" onerror="this.style.display='none'">
+      <div>
+        <b>Mathew Smith &amp; Khristi V. Cummings, Realtors®</b>
+        <span>United Real Estate Gallery<br>
+        Mathew Smith · FL Lic. SL3377387 · <a href="tel:+19043342295">904-334-2295</a> · <a href="mailto:904mattsmith@gmail.com">904mattsmith@gmail.com</a><br>
+        Khristi V. Cummings · FL Lic. SL3401775 · <a href="tel:+17042807277">704-280-7277</a> · <a href="mailto:khristiviktoriany@propertyinjax.com">khristiviktoriany@propertyinjax.com</a></span>
+      </div>
+    </div>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
     <img class="ureg-logo" src="../assets/ureg.png" alt="United Real Estate Gallery" width="114" height="48">
-    <strong>Mathew Smith, Realtor®</strong> · United Real Estate Gallery<br>
-    1262-1 S McDuff Avenue, Jacksonville, FL 32205 · FL License #SL3377387<br>
-    <a href="tel:+19043342295">904-334-2295</a> · <a href="https://mathewmoveshomes.com/">MathewMovesHomes.com</a>
+    <strong>Mathew Smith &amp; Khristi V. Cummings, Realtors®</strong> · United Real Estate Gallery<br>
+    1262-1 S McDuff Avenue, Jacksonville, FL 32205<br>
+    Mathew Smith · FL Lic. SL3377387 · <a href="tel:+19043342295">904-334-2295</a><br>
+    Khristi V. Cummings · FL Lic. SL3401775 · <a href="tel:+17042807277">704-280-7277</a><br>
+    <a href="https://mathewmoveshomes.com/">MathewMovesHomes.com</a>
   </div>
 </footer>
 
@@ -281,5 +302,7 @@
     b.scrollIntoView({behavior:'smooth', block:'center'});
   }
 </script>
+<!-- Web3Forms hCaptcha (spam protection) -->
+<script src="https://web3forms.com/client/script.js" async defer></script>
 </body>
 </html>
