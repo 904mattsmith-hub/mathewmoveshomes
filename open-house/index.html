@@ -89,12 +89,12 @@
   </div>
   <p class="eyebrow">Open House</p>
   <h1>Welcome — come on in!</h1>
-  <p class="addr" id="addr">Please sign in so I can send you the details on this home.</p>
+  <p class="addr" id="addr">Please sign in so we can send you the details on this home.</p>
 
   <div class="card">
     <div id="thanks" class="thanks" hidden>
       <h2>Thanks for signing in!</h2>
-      <p>Enjoy the tour. I'll send you the property details, disclosures, and a few similar homes. Questions? Just ask me while you're here.</p>
+      <p>Enjoy the tour. We'll send you the property details, disclosures, and a few similar homes. Questions? Just ask us while you're here.</p>
       <p class="again" id="again" hidden>This screen resets for the next guest in <span id="countdown">10</span> seconds.</p>
       <p style="margin-top:18px"><a class="btn" id="listingLink" href="https://mathewmoveshomes.com/" style="text-decoration:none">See photos &amp; details</a></p>
       <p style="margin-top:10px"><a href="tel:+19043342295">Call or text Mathew: 904-334-2295</a></p>
@@ -168,17 +168,17 @@
         </select>
       </div>
 
-      <label class="consent"><input type="checkbox" name="text_consent" value="Yes — OK to call/text"><span>Yes, Mathew Smith may call or text me about this home and my home search at the number above. Msg &amp; data rates may apply. Reply STOP to opt out. Consent isn't required to tour.</span></label>
+      <label class="consent"><input type="checkbox" name="text_consent" value="Yes — OK to call/text"><span>Yes, Smith &amp; Cummings Realtors (Mathew Smith or Khristi Cummings) may call or text me about this home and my home search at the number above. Msg &amp; data rates may apply. Reply STOP to opt out. Consent isn't required to tour.</span></label>
       <div class="h-captcha" data-captcha="true" style="margin-top:14px"></div>
 
       <p class="err" id="err" role="alert"></p>
       <button type="submit" class="btn">Sign in</button>
-      <p class="privacy">Your info goes straight to Mathew — never sold or shared.</p>
+      <p class="privacy">Your info goes straight to Mathew &amp; Khristi — never sold or shared.</p>
     </form>
   </div>
 
   <footer>
-    <strong>Smith &amp; Cummings Realtors</strong> · Mathew Smith, Realtor® · United Real Estate Gallery<br>
+    <strong>Smith &amp; Cummings Realtors</strong> · Mathew Smith &amp; Khristi V Cummings, REALTORS® · United Real Estate Gallery<br>
     1262-1 S McDuff Avenue, Jacksonville, FL 32205 · FL License #SL3377387<br>
     <a href="tel:+19043342295">904-334-2295</a> · Equal Housing Opportunity
   </footer>
@@ -235,7 +235,7 @@
     var msg = '';
     if (!form.name.value.trim()) msg = 'Please enter your name.';
     else if (form.phone.value.replace(/\D/g, '').length < 10) msg = 'Please enter a 10-digit phone number.';
-    else if (!val('has_agent')) msg = 'Please tell me if you\'re working with an agent.';
+    else if (!val('has_agent')) msg = 'Please tell us if you\'re working with an agent.';
     else if (!val('timeline')) msg = 'Please pick a moving timeline.';
     if (msg) { e.preventDefault(); err.textContent = msg; err.classList.add('show'); return; }
 
