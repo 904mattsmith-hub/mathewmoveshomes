@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Open House Sign-In | Mathew Moves Homes</title>
+<meta name="description" content="Welcome! Sign in to the open house and get the property details, disclosures, and similar homes from Mathew Smith, Realtor®.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230E2A47'/%3E%3Cpath d='M14 44V22l10 12 8-12 18 22' fill='none' stroke='%2329B6E5' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R5NLNTT1ZR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-R5NLNTT1ZR');
+</script>
+<!-- Meta Pixel -->
+<script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '357682004910597');
+  fbq('track', 'PageView');
+</script>
+
+<style>
+  :root{
+    --navy:#0E2A47;--navy-deep:#081A2E;--cyan:#29B6E5;--mist:#F2F6F9;--ink:#16283A;
+    --slate:#4A5D70;--line:#DCE5EC;--white:#FFFFFF;
+    --display:"Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  [hidden]{display:none !important}
+  body{font-family:var(--sans);color:var(--ink);background:linear-gradient(160deg,var(--navy) 0%,var(--navy-deep) 100%);min-height:100vh;line-height:1.6}
+  a{color:var(--cyan)}
+  .wrap{max-width:640px;margin:0 auto;padding:28px 24px 48px}
+  .brandbar{margin-bottom:26px}
+  .brandbar img{height:56px;width:auto;background:var(--white);border-radius:8px;padding:6px}
+  .eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--cyan);font-weight:600}
+  h1{font-family:var(--display);font-weight:400;line-height:1.15;color:var(--white);font-size:clamp(30px,5vw,44px);margin:8px 0 6px}
+  .addr{color:#B9CBDD;font-size:17px;margin-bottom:24px}
+  .card{background:var(--white);border-radius:12px;padding:26px;box-shadow:0 24px 60px rgba(0,0,0,.35)}
+  .card h2{font-family:var(--display);font-weight:400;color:var(--navy);font-size:24px;line-height:1.25}
+  .card .hint{color:var(--slate);font-size:14.5px;margin-bottom:6px}
+  .field label,.qlabel{display:block;font-size:13.5px;letter-spacing:.03em;margin:16px 0 6px;color:var(--slate);font-weight:600}
+  .field input,.field select{width:100%;padding:13px;border-radius:6px;border:1.5px solid var(--line);background:var(--white);color:var(--ink);font-family:var(--sans);font-size:16px}
+  .field input:focus,.field select:focus{outline:2px solid var(--cyan);outline-offset:1px;border-color:var(--cyan)}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .req{color:#C2410C}
+  .muted{color:#8296A9;font-weight:400}
+  .opts{display:grid;gap:8px;grid-template-columns:1fr 1fr}
+  .opt{position:relative;display:flex;align-items:center;gap:10px;border:1.5px solid var(--line);border-radius:8px;padding:12px;cursor:pointer;font-size:15px;line-height:1.3}
+  .opt:hover{border-color:var(--cyan)}
+  .opt input{position:absolute;opacity:0;pointer-events:none}
+  .opt .ic{flex:none;width:18px;height:18px;border:2px solid #A9BACA;border-radius:50%}
+  .opt input:checked + .ic{border-color:var(--cyan);background:var(--cyan)}
+  .opt:has(input:checked){border-color:var(--cyan);background:#EAF7FD}
+  .opt:has(input:focus-visible){outline:2px solid var(--cyan);outline-offset:2px}
+  .consent{display:flex;gap:10px;align-items:flex-start;margin-top:18px;font-size:12.5px;color:var(--slate);line-height:1.5}
+  .consent input{margin-top:3px;flex:none;width:16px;height:16px}
+  .btn{display:block;width:100%;margin-top:20px;padding:15px 26px;border-radius:6px;border:none;cursor:pointer;font-weight:600;font-size:17px;font-family:var(--sans);background:var(--cyan);color:var(--navy-deep)}
+  .btn:focus{outline:2px solid var(--navy);outline-offset:2px}
+  .err{display:none;color:#C2410C;font-size:14px;margin-top:10px;font-weight:600}
+  .err.show{display:block}
+  .privacy{text-align:center;color:var(--slate);font-size:12.5px;margin-top:12px}
+  .thanks{text-align:center;padding:16px 0}
+  .thanks h2{font-size:30px;margin-bottom:8px}
+  .thanks p{color:var(--slate)}
+  .thanks .again{margin-top:22px;font-size:14px;color:#8296A9}
+  footer{color:#9FB4C8;font-size:12.5px;line-height:1.7;text-align:center;margin-top:28px}
+  footer strong{color:var(--white);font-weight:600}
+  footer a{color:var(--cyan);text-decoration:none}
+  @media (max-width:520px){
+    .wrap{padding:22px 16px 40px}
+    .card{padding:22px 16px}
+    .row,.opts{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="brandbar">
+    <img src="../assets/logo.png" alt="Mathew Smith Realtor — United Real Estate Gallery" width="196" height="56" style="width:auto">
+  </div>
+  <p class="eyebrow">Open House</p>
+  <h1>Welcome — come on in!</h1>
+  <p class="addr" id="addr">Please sign in so I can send you the details on this home.</p>
+
+  <div class="card">
+    <div id="thanks" class="thanks" hidden>
+      <h2>Thanks for signing in!</h2>
+      <p>Enjoy the tour. I'll send you the property details, disclosures, and a few similar homes. Questions? Just ask me while you're here.</p>
+      <p class="again">This screen resets for the next guest in <span id="countdown">10</span> seconds.</p>
+    </div>
+
+    <form id="ohForm" action="https://api.web3forms.com/submit" method="POST" data-form-name="mmh_open_house_signin">
+      <input type="hidden" name="access_key" value="a67a24a9-44e8-475d-8240-e3a9df61dd03">
+      <input type="hidden" name="subject" id="f-subject" value="Open House Sign-In — MathewMovesHomes.com">
+      <input type="hidden" name="from_name" value="Mathew Moves Homes — Open House">
+      <input type="hidden" name="redirect" id="f-redirect" value="https://mathewmoveshomes.com/open-house/?sent=1">
+      <input type="hidden" name="property" id="f-property" value="">
+      <input type="hidden" name="lead_priority" id="f-priority" value="">
+      <input type="hidden" name="lead_source" id="f-source" value="Open House sign-in">
+      <input type="hidden" name="landing_page" id="f-landing" value="">
+      <input type="hidden" name="buyer_type" value="Open house visitor">
+      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+
+      <h2>Sign in</h2>
+      <p class="hint">Takes 30 seconds. No spam, ever.</p>
+      <div class="field">
+        <label for="f-name">Full name <span class="req">*</span></label>
+        <input id="f-name" type="text" name="name" autocomplete="name" required>
+        <div class="row">
+          <div>
+            <label for="f-phone">Mobile phone <span class="req">*</span></label>
+            <input id="f-phone" type="tel" name="phone" autocomplete="tel" placeholder="904-000-0000" required>
+          </div>
+          <div>
+            <label for="f-email">Email <span class="muted">(optional)</span></label>
+            <input id="f-email" type="email" name="email" autocomplete="email" placeholder="you@email.com">
+          </div>
+        </div>
+      </div>
+
+      <span class="qlabel">Are you working with a real estate agent?</span>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="has_agent" value="No" required><span class="ic"></span>No</label>
+        <label class="opt"><input type="radio" name="has_agent" value="Yes"><span class="ic"></span>Yes</label>
+      </div>
+      <div class="field" id="agentWrap" hidden>
+        <label for="f-agent">Agent's name <span class="muted">(optional)</span></label>
+        <input id="f-agent" type="text" name="agent_name">
+      </div>
+
+      <span class="qlabel">When are you hoping to move?</span>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="timeline" value="0–3 months" required><span class="ic"></span>0–3 months</label>
+        <label class="opt"><input type="radio" name="timeline" value="3–6 months"><span class="ic"></span>3–6 months</label>
+        <label class="opt"><input type="radio" name="timeline" value="6–12 months"><span class="ic"></span>6–12 months</label>
+        <label class="opt"><input type="radio" name="timeline" value="Just looking"><span class="ic"></span>Just looking</label>
+      </div>
+
+      <span class="qlabel">Do you have a home to sell first?</span>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="home_to_sell" value="No"><span class="ic"></span>No</label>
+        <label class="opt"><input type="radio" name="home_to_sell" value="Yes — need to sell first"><span class="ic"></span>Yes</label>
+      </div>
+
+      <div class="field">
+        <label for="f-heard">How did you hear about today's open house?</label>
+        <select id="f-heard" name="heard_about">
+          <option value="">Choose one</option>
+          <option>Sign / drove by</option>
+          <option>Zillow / Realtor.com</option>
+          <option>Facebook / Instagram</option>
+          <option>Nextdoor</option>
+          <option>Postcard / mailer</option>
+          <option>Friend or neighbor</option>
+          <option>I'm a neighbor</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <label class="consent"><input type="checkbox" name="text_consent" value="Yes — OK to call/text"><span>Yes, Mathew Smith may call or text me about this home and my home search at the number above. Msg &amp; data rates may apply. Reply STOP to opt out. Consent isn't required to tour.</span></label>
+      <div class="h-captcha" data-captcha="true" style="margin-top:14px"></div>
+
+      <p class="err" id="err" role="alert"></p>
+      <button type="submit" class="btn">Sign in</button>
+      <p class="privacy">Your info goes straight to Mathew — never sold or shared.</p>
+    </form>
+  </div>
+
+  <footer>
+    <strong>Mathew Smith, Realtor®</strong> · United Real Estate Gallery<br>
+    1262-1 S McDuff Avenue, Jacksonville, FL 32205 · FL License #SL3377387<br>
+    <a href="tel:+19043342295">904-334-2295</a> · Equal Housing Opportunity
+  </footer>
+</div>
+
+<script>
+(function () {
+  // ?p=<listing slug> selects the property; add new open houses here.
+  var LISTINGS = {
+    '25-coquina-ave': '25 Coquina Ave, St. Augustine, FL 32080'
+  };
+  var LEAD_LOG = 'https://script.google.com/macros/s/AKfycbwvxRHuVvyxbYGEqVlcqyMmWPXniXm1Ih-LHSkp_KoAxLa_R4hxiqhKNf8ffTKLJS0a/exec';
+  var params = new URLSearchParams(location.search);
+  var slug = params.get('p') || '';
+  var address = LISTINGS[slug] || params.get('address') || '';
+
+  var form = document.getElementById('ohForm');
+  var err = document.getElementById('err');
+  if (address) document.getElementById('addr').textContent = address;
+  document.getElementById('f-property').value = address || 'Not specified';
+  document.getElementById('f-source').value = 'Open House sign-in' + (address ? ' — ' + address : '');
+  document.getElementById('f-landing').value = location.href;
+  document.getElementById('f-redirect').value =
+    'https://mathewmoveshomes.com/open-house/?sent=1' + (slug ? '&p=' + encodeURIComponent(slug) : '');
+
+  // kiosk mode: after a sign-in, show thanks, then reset for the next guest
+  if (params.get('sent') === '1') {
+    form.hidden = true;
+    document.getElementById('thanks').hidden = false;
+    var n = 10, cd = document.getElementById('countdown');
+    var t = setInterval(function () {
+      n -= 1; cd.textContent = n;
+      if (n <= 0) { clearInterval(t); location.replace('./' + (slug ? '?p=' + encodeURIComponent(slug) : '')); }
+    }, 1000);
+    return;
+  }
+
+  var agentWrap = document.getElementById('agentWrap');
+  form.querySelectorAll('input[name="has_agent"]').forEach(function (r) {
+    r.addEventListener('change', function () { agentWrap.hidden = r.value !== 'Yes' || !r.checked; });
+  });
+
+  function val(name) {
+    var el = form.querySelector('input[name="' + name + '"]:checked');
+    return el ? el.value : '';
+  }
+
+  form.addEventListener('submit', function (e) {
+    err.classList.remove('show');
+    var msg = '';
+    if (!form.name.value.trim()) msg = 'Please enter your name.';
+    else if (form.phone.value.replace(/\D/g, '').length < 10) msg = 'Please enter a 10-digit phone number.';
+    else if (!val('has_agent')) msg = 'Please tell me if you\'re working with an agent.';
+    else if (!val('timeline')) msg = 'Please pick a moving timeline.';
+    if (msg) { e.preventDefault(); err.textContent = msg; err.classList.add('show'); return; }
+
+    var timeline = val('timeline'), agent = val('has_agent');
+    var score = { '0–3 months': 3, '3–6 months': 2, '6–12 months': 1 }[timeline] || 0;
+    if (agent === 'No') score += 2;
+    if (form.querySelector('input[name="text_consent"]').checked) score += 1;
+    var pri = agent === 'Yes' ? 'NURTURE' : score >= 5 ? 'HOT' : score >= 3 ? 'WARM' : 'NURTURE';
+    document.getElementById('f-priority').value = pri + ' (' + score + '/6)';
+    document.getElementById('f-subject').value =
+      (pri === 'HOT' ? '🔥 HOT' : pri === 'WARM' ? 'WARM' : 'Nurture') + ' Open House Sign-In — ' +
+      (address || 'open house') + ' · ' + timeline + (agent === 'Yes' ? ' · HAS AGENT' : '');
+
+    // copy into the Buyer Leads sheet (fire-and-forget; the email still goes via Web3Forms)
+    try {
+      var log = new URLSearchParams(new FormData(form));
+      log.delete('access_key'); log.delete('h-captcha-response'); log.delete('g-recaptcha-response');
+      var notes = ['Agent: ' + agent + (form.agent_name.value ? ' (' + form.agent_name.value + ')' : ''),
+                   'Heard via: ' + (form.heard_about.value || '—')];
+      log.set('notes', notes.join(' · '));
+      log.set('areas', address);
+      log.set('preferred_contact', 'Text');
+      navigator.sendBeacon(LEAD_LOG, log);
+    } catch (x) {}
+
+    try {
+      fbq('track', 'Lead', { content_name: 'open house sign-in', lead_priority: pri });
+      gtag('event', 'generate_lead', { form_name: 'mmh_open_house_signin', page_path: location.pathname });
+      gtag('event', 'open_house_signin', { property: address, lead_priority: pri, timeline: timeline, has_agent: agent });
+    } catch (x) {}
+  });
+})();
+</script>
+<!-- Web3Forms hCaptcha (spam protection) -->
+<script src="https://web3forms.com/client/script.js" async defer></script>
+</body>
+</html>
