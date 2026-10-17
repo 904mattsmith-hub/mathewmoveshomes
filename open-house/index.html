@@ -95,7 +95,9 @@
     <div id="thanks" class="thanks" hidden>
       <h2>Thanks for signing in!</h2>
       <p>Enjoy the tour. I'll send you the property details, disclosures, and a few similar homes. Questions? Just ask me while you're here.</p>
-      <p class="again">This screen resets for the next guest in <span id="countdown">10</span> seconds.</p>
+      <p class="again" id="again" hidden>This screen resets for the next guest in <span id="countdown">10</span> seconds.</p>
+      <p style="margin-top:18px"><a class="btn" id="listingLink" href="https://mathewmoveshomes.com/" style="text-decoration:none">See photos &amp; details</a></p>
+      <p style="margin-top:10px"><a href="tel:+19043342295">Call or text Mathew: 904-334-2295</a></p>
     </div>
 
     <form id="ohForm" action="https://api.web3forms.com/submit" method="POST" data-form-name="mmh_open_house_signin">
@@ -191,6 +193,7 @@
   var LEAD_LOG = 'https://script.google.com/macros/s/AKfycbwvxRHuVvyxbYGEqVlcqyMmWPXniXm1Ih-LHSkp_KoAxLa_R4hxiqhKNf8ffTKLJS0a/exec';
   var params = new URLSearchParams(location.search);
   var slug = params.get('p') || '';
+  var kiosk = params.get('kiosk') === '1';            // tablet at the door: auto-reset after each guest
   var address = LISTINGS[slug] || params.get('address') || '';
 
   var form = document.getElementById('ohForm');
@@ -200,16 +203,19 @@
   document.getElementById('f-source').value = 'Open House sign-in' + (address ? ' — ' + address : '');
   document.getElementById('f-landing').value = location.href;
   document.getElementById('f-redirect').value =
-    'https://mathewmoveshomes.com/open-house/?sent=1' + (slug ? '&p=' + encodeURIComponent(slug) : '');
+    'https://mathewmoveshomes.com/open-house/?sent=1' + (slug ? '&p=' + encodeURIComponent(slug) : '') + (kiosk ? '&kiosk=1' : '');
 
   // kiosk mode: after a sign-in, show thanks, then reset for the next guest
   if (params.get('sent') === '1') {
     form.hidden = true;
     document.getElementById('thanks').hidden = false;
+    if (slug) document.getElementById('listingLink').href = '../' + slug + '/';
+    if (!kiosk) return;                                // their own phone: leave the thank-you up
+    document.getElementById('again').hidden = false;
     var n = 10, cd = document.getElementById('countdown');
     var t = setInterval(function () {
       n -= 1; cd.textContent = n;
-      if (n <= 0) { clearInterval(t); location.replace('./' + (slug ? '?p=' + encodeURIComponent(slug) : '')); }
+      if (n <= 0) { clearInterval(t); location.replace('./?kiosk=1' + (slug ? '&p=' + encodeURIComponent(slug) : '')); }
     }, 1000);
     return;
   }
